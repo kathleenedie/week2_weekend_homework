@@ -23,3 +23,5 @@ class TestGuest(unittest.TestCase):
 
     def test_guest_has_entry_fee(self):
         self.assertEqual("Yes, warbling for me", self.guest_1.guest_has_entry_fee(self.room_1, self.guest_1))
+    
+    

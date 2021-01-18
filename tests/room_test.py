@@ -54,6 +54,12 @@ class TestRoom (unittest.TestCase):
         self.room_2.check_in_guests(self.guest_3)
         self.assertEqual("Sorry, too many here!", self.room_2.check_capacity_for_guests(self.room_2))
 
+    # def test_guest_favourite_song_in_playlist_yes(self):
+    #     self.room_1.add_songs_to_playlist(self.song_1)
+    #     self.room_1.add_songs_to_playlist(self.song_2)
+    #     self.assertEqual("Whoo hoo!", self.room_1.guest_favourite_song_in_playlist(self.guest_1))
+
     def test_guest_favourite_song_in_playlist_yes(self):
         self.room_1.add_songs_to_playlist(self.song_1)
-        self.assertEqual("Whoo hoo!", self.room_1.guest_favourite_song_in_playlist(self.guest_1))
+        self.room_1.add_songs_to_playlist(self.song_2)
+        self.assertEqual("Whoo hoo!", self.room_1.guest_favourite_song_in_playlist("The Chain"))
