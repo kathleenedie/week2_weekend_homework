@@ -62,4 +62,4 @@ class TestRoom (unittest.TestCase):
     def test_guest_favourite_song_in_playlist_yes(self):
         self.room_1.add_songs_to_playlist(self.song_1)
         self.room_1.add_songs_to_playlist(self.song_2)
-        self.assertEqual("Whoo hoo!", self.room_1.guest_favourite_song_in_playlist("The Chain"))
+        self.assertEqual("Whoo hoo!", self.room_1.guest_favourite_song_in_playlist(self.guest_1))

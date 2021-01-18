@@ -36,9 +36,16 @@ class Room:
     #         else: 
     #             return "It's just ok"
     
+    # def guest_favourite_song_in_playlist(self, guest):
+    #     for play in self.playlist:
+    #         if guest in self.playlist:
+    #             return "whoo hoo!"
+    #         else: 
+    #             return "It's just ok"
+    
     def guest_favourite_song_in_playlist(self, guest):
-        for play in self.playlist:
-            if guest in self.playlist:
-                return "whoo hoo!"
-            else: 
-                return "It's just ok"
+        for song in self.playlist:
+            if guest.favourite_song in song.title:
+                return "Whoo hoo!"
+        else: 
+            return "It's just ok"
